@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Morse Code Converter</title>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Morse Code Converter</h1>
+
+            <div class="converter">
+                <div class="button-group">
+                    <button class="copy-btn" onclick="copyText('morseInput')">
+                        Copy
+                    </button>
+                    <button
+                        class="play-btn"
+                        id="playText"
+                        onclick="togglePlay('text')">
+                        <i data-feather="play"></i>
+                    </button>
+                </div>
+                <div class="converter-box">
+                    <div class="input-group">
+                        <textarea
+                            id="textInput"
+                            placeholder="Enter text here..."></textarea>
+                    </div>
+                    <div class="input-group">
+                        <textarea
+                            id="morseInput"
+                            placeholder="Enter morse code here (use space between letters and '/' between words)"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <button class="toggle-btn" onclick="toggleReference()">
+                Show Morse Code Reference
+            </button>
+
+            <div class="reference hidden" id="referenceTable">
+                <div class="morse-table" id="morseTable"></div>
+            </div>
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
